@@ -20,11 +20,13 @@ const SearchPage = ({ searchParams }) => {
 
   return (
     <div className=" max-w-7xl m-auto py-2">
-      <h1 className="text-4xl mb-4 flex justify-center">Search Page</h1>
+      <h1 className="text-4xl mb-4 flex justify-center">
+        Search Page with {searchParam}
+      </h1>
       <div className="grid grid-cols-4 gap-5">
         {items.length === 0 && (
           <p className=" text-center text-2xl">
-            No Product with =/ {searchParam}
+            No Product with =( {searchParam}
           </p>
         )}
         {items.map((item) => (
