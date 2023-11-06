@@ -1,8 +1,7 @@
 "use client";
 
-import axios from "axios";
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 const Search = () => {
   const [search, setSearch] = useState("");
@@ -10,16 +9,7 @@ const Search = () => {
 
   async function handleSubmit(e) {
     e.preventDefault();
-
-    // const res = await fetch(
-    //   `https://dummyjson.com/products/search?q=` + search
-    // );
-
-    // const data = await res.json();
-
     router.push(`/menu/search?q=${search}`);
-
-    // console.log("data from search", data);
     setSearch("");
   }
   return (
@@ -33,7 +23,7 @@ const Search = () => {
             console.log(search);
           }}
           placeholder="Search"
-          className=" border-2 rounded-lg text-center text-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-600  px-1  focus:ring-offset-2  "
+          className=" border-2 border-yellow-300  rounded-lg text-center text-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400  px-1  focus:ring-offset-2  "
         />
       </form>
     </div>

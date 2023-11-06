@@ -19,5 +19,14 @@ export function middleware(request) {
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ["/", "/profile", "/login"],
+  matcher: [
+    "/",
+    "/profile",
+    "/login",
+    "/cart",
+    "/menu/:path*",
+    "/categories",
+    "/categories/:path*",
+    "/search",
+  ],
 };

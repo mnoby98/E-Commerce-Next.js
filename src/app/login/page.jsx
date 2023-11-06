@@ -5,7 +5,12 @@ import InputField from "../components/InputField";
 import axios from "axios";
 import login from "@/app/api/users/login/route";
 import { useRouter } from "next/navigation";
+import { useDispatch, useSelector } from "react-redux";
+import { currentUser, setCart } from "../redux/features/userSlice";
+import { getData } from "../cart/page";
+
 const Login = () => {
+  const dispatch = useDispatch();
   const router = useRouter();
   const initialValues = {
     email: "",
@@ -13,13 +18,16 @@ const Login = () => {
   };
 
   const validationSchema = Yup.object({
-    email: Yup.string().email().required("Required field"),
+    // email: Yup.string().email().required("Required field"),
+    email: Yup.string().required("Required field"),
     password: Yup.string().required("Required field"),
   });
   const onSubmit = async (values) => {
-    console.log(values);
     const req = await axios.post("/api/users/login", values);
-    console.log("req", req);
+    dispatch(currentUser(req.data.data));
+    const cart = await getData(req.data.data.id);
+    dispatch(setCart(cart?.carts?.[0]));
+    console.log(cart.carts[0]);
     router.push("/");
   };
 
