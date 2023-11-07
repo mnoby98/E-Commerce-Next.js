@@ -44,7 +44,7 @@ const Header = () => {
             Home
           </Link>
           <Link
-            className=" hover:bg-yellow-300 px-2 py-1 hover:text-black rounded-lg"
+            className=" hover:bg-yellow-300 px-2 py-1  visited:bg-yellow-300 focus:text-black focus:bg-yellow-300 active:bg-yellow-300 hover:text-black rounded-lg"
             href={"/menu"}>
             menu
           </Link>
@@ -52,13 +52,13 @@ const Header = () => {
             className=" relative "
             id="list">
             <button
-              className=" hover:bg-yellow-200 px-2 py-1 hover:text-black rounded-lg"
+              className=" hover:bg-yellow-200 px-2 py-1 visited:bg-yellow-300 focus:text-black focus:bg-yellow-300 active:bg-yellow-300 hover:text-black rounded-lg"
               // onMouseUp={handlecloseCat}
               onClick={handleCategories}>
               Categories
             </button>
             <Link
-              className=" hover:bg-yellow-300 px-2 py-1 hover:text-black rounded-lg"
+              className=" hover:bg-yellow-300 px-2 py-1 visited:bg-yellow-300 focus:text-black focus:bg-yellow-300 active:bg-yellow-300 hover:text-black rounded-lg"
               // onMouseUp={handlecloseCat}
               // onClick={handleCart}>
               href={`/cart?c=${user.id}`}>
@@ -67,7 +67,7 @@ const Header = () => {
             <ul
               className={`${
                 showCategories === true ? "absolute" : " hidden"
-              }  text-black capitalize divide-y-2 divide-orange-700  rounded-lg bg-yellow-300 w-[200px] scroll-smooth  text-xl font-medium text-center cursor-pointer h-[200px] overflow-y-scroll`}>
+              }  text-black capitalize divide-y-2 divide-orange-700  rounded-lg  bg-yellow-300 w-[200px] scroll-smooth  text-xl font-medium text-center cursor-pointer h-[200px] overflow-y-scroll`}>
               {caregories.map((category, i) => (
                 <Link
                   key={caregories[i]}

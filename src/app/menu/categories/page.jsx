@@ -10,7 +10,7 @@ const Categories = async () => {
           <Link
             key={item}
             href={`/menu/categories/${item}`}
-            className=" border-2 bg-orange-500  w-[300px] shadow-lg rounded-md flex flex-col   items-center">
+            className=" border-2 bg-yellow-300 gap-10  w-[300px] shadow-lg rounded-md flex flex-col   items-center">
             <p className="text-xl capitalize font-medium flex justify-center items-center px-2  py-4  mt-2">
               {item}
             </p>
