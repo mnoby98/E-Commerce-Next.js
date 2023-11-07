@@ -2,6 +2,7 @@
 
 import { useDispatch, useSelector } from "react-redux";
 import { addItemToCart } from "../redux/features/userSlice";
+import toast from "react-hot-toast";
 
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable @next/next/no-img-element */
@@ -22,8 +23,10 @@ const MenuItem = ({ item }) => {
     state.user?.cart?.products?.find((product) => product.id === item.id)
   );
   function addCart() {
-    if (newProduct) return;
+    if (newProduct) return toast.error("Product is already in cart");
+
     dispatch(addItemToCart(cartItem));
+    toast.success("Product is in Cart");
     console.log(newProduct);
     console.log("addToCart");
   }

@@ -8,6 +8,7 @@ import {
   getTotalCartQuantity,
   increaseItemQuantity,
 } from "../redux/features/userSlice";
+import toast from "react-hot-toast";
 
 const CartItem = ({ product }) => {
   const dispatch = useDispatch();
@@ -16,8 +17,7 @@ const CartItem = ({ product }) => {
 
   function IncQuantity() {
     dispatch(increaseItemQuantity(product.id));
-    console.log(product.quantity);
-    console.log(totalPrice);
+
     // e.preventDefault();
     // if (maxQu) return;
     // setQuantity(quantity + 1);

@@ -5,7 +5,8 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { addCart } from "../api/cart/add/route";
 import { useDispatch, useSelector } from "react-redux";
-import { getCart, setCart } from "../redux/features/userSlice";
+import { clearCart, getCart, setCart } from "../redux/features/userSlice";
+import toast from "react-hot-toast";
 
 const CartContainer = ({ cart }) => {
   const dispatch = useDispatch();
@@ -30,9 +31,9 @@ const CartContainer = ({ cart }) => {
 
   async function deleteCart() {
     const data = await DeleteUserCart(cartId);
-    console.log("cart is deleted");
-    console.log(data.isDeleted);
-    setDeleted(data.isDeleted);
+    dispatch(clearCart());
+    toast.success("cart is deleted");
+    // setDeleted(data.isDeleted);
   }
   async function submitCart() {
     const productsAndUserId = { products, cartId };
@@ -43,7 +44,7 @@ const CartContainer = ({ cart }) => {
   }
   return (
     <div className=" text-xl   ">
-      {deleted ? (
+      {products?.length === 0 ? (
         <p className="flex justify-center items-center mt-20 pt-2">
           Cart is empty , buy now
           <Link

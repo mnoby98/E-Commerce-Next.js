@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 const { createSlice } = require("@reduxjs/toolkit");
 
 const initialState = {
@@ -24,6 +26,8 @@ const userSlice = createSlice({
       state.cart.products = state.cart.products.filter(
         (item) => item.id !== action.payload
       );
+      state.cart.totalProducts = state.cart.products.length;
+      toast.success(`Product is deleted`);
     },
     increaseItemQuantity(state, action) {
       const product = state.cart.products.find(
@@ -50,25 +54,25 @@ const userSlice = createSlice({
         (item) => item.id === action.payload
       );
       product.quantity--;
-      product.total = product.quantity * product.price;
+      product.total = Number(product.quantity) * Number(product.price);
       product.discountedPrice =
         product.total * (Number(product.discountPercentage) / 100);
       //getTotal Quantity for cart
       state.cart.totalQuantity = state.cart?.products.reduce(
-        (sum, item) => sum - item.quantity,
+        (sum, item) => item.quantity + sum,
         0
       );
 
       //getTotal Price for cart
       state.cart.total = state.cart?.products.reduce(
-        (sum, item) => sum - item.total,
+        (sum, item) => item.total + sum,
         0
       );
       if (product.quantity === 0)
         userSlice.caseReducers.deleteItem(state, action);
     },
     clearCart(state) {
-      state.cart = [];
+      state.cart.products = [];
     },
   },
 });
