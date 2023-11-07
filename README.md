@@ -13,7 +13,8 @@
 
 ### Tools:
 
-- Next.js
+- Next.js 13
+- Redux
 - TailWind
 - Toast
 
@@ -32,15 +33,22 @@ Inside E-commerce project, you'll see the following folders and files:
 │   ├── middleware.js
 │   │
 │   └────app/
-│         ├──────api/
-│         |       │
-|         |       ├cart
-│         |       │
-|         | # Api ├categories
-│         |       │
-|         |       ├menu
-│         |       │
-|         |       └users
+|         |
+|         ├page.jsx
+|         |
+|         ├globals.css
+|         |
+|         ├layout.jsx
+|         |
+│         ├───────────api/
+│         |             │
+|         |             ├cart
+│         |             │
+|         | # Api route ├categories
+│         |             │
+|         |             ├menu
+│         |             │
+|         |             └users
 |         |
 |         |
 |         |
@@ -49,9 +57,9 @@ Inside E-commerce project, you'll see the following folders and files:
 │         │  └page.jsx
 │         │
 │ # Pages │
-│         ├components/
-│         │  |
-│         │  └page.jsx
+│         ├components/ #jsx files
+│         │
+│         │
 │         |
 │         ├froget-password/
 │         │  |
@@ -62,10 +70,36 @@ Inside E-commerce project, you'll see the following folders and files:
 │         │  └page.jsx
 │         |
 │         ├menu/
+│         │  |
+│         │  ├[id]/
+│         │  |   |
+│         │  |   └page.jsx
+│         │  |
+│         │  ├categories/
+│         │  |   |
+│         │  |   ├[category]
+│         │  |   |   |
+│         │  |   |   └page.jsx
+│         │  |   |
+│         │  |   └page.jsx
+│         │  |
+│         │  ├search/
+│         │  |   |
+│         │  |   └page.jsx
+│         │  |
+│         │  ├layout.jsx
+│         │  |
+│         │  └page.jsx
 │         |
 │ # Redux └redux/
-│
-│
+|            |
+|            |
+│            ├fetures
+|            |
+|            |
+│            └store.js
+|
+|
 └── packages files
 
 ```
