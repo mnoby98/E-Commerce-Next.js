@@ -11,7 +11,8 @@ products: [
 
 export async function addCart(productsAndUserId) {
   try {
-    const { products, userId } = productsAndUserId;
+    const { products, cartId } = productsAndUserId;
+    console.log("userId", cartId);
     // const test = products.map((product) => {
     //   product.id, product.quantity;
     // });
@@ -20,7 +21,7 @@ export async function addCart(productsAndUserId) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        userId: userId,
+        userId: cartId,
         products: [
           {
             id: 1,

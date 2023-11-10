@@ -32,7 +32,7 @@ const CartItem = ({ product }) => {
     <div className="grid grid-cols-2 items-center  justify-center px-4 py-5 max-w-4xl ">
       <div className="flex flex-col gap-3">
         <p>Product : {product.title}</p>
-        <p>Price : {product.price}</p>
+        <p>Price : {product.price} $</p>
         <div>
           Quantity : <button onClick={DecQuantity}>-</button>
           <span> {product.quantity} </span>
@@ -43,7 +43,7 @@ const CartItem = ({ product }) => {
             )} */}
         </div>
         {/* <p>Total Price : {quantity * Number(product.price)}</p> */}
-        <p>Total Price : {product.total}</p>
+        <p>Total Price : {product.total} $</p>
       </div>
       <div className=" flex  justify-end">
         <img

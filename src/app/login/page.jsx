@@ -26,7 +26,12 @@ const Login = () => {
     const req = await axios.post("/api/users/login", values);
     dispatch(currentUser(req.data.data));
     const cart = await getData(req.data.data.id);
-    dispatch(setCart(cart?.carts?.[0]));
+    // dispatch(setCart(cart?.carts?.[0]));
+    const cartString = cart?.carts?.[0];
+    localStorage.setItem("cart", JSON.stringify(cartString));
+    const cartItems = JSON.parse(localStorage.getItem("cart"));
+    console.log("cartItems", cartItems);
+    dispatch(setCart(cartItems));
     console.log(cart.carts[0]);
     router.push("/");
   };

@@ -18,7 +18,8 @@ const userSlice = createSlice({
     },
     addItemToCart(state, action) {
       state.cart.products.push(action.payload);
-
+      //Set updated Cart
+      localStorage.setItem("cart", JSON.stringify(state.cart));
       //get totalProducts in cart
       // state.cart.totalProducts = state.cart?.products?.length;
     },
@@ -28,6 +29,8 @@ const userSlice = createSlice({
       );
       state.cart.totalProducts = state.cart.products.length;
       toast.success(`Product is deleted`);
+      //Set updated Cart
+      localStorage.setItem("cart", JSON.stringify(state.cart));
     },
     increaseItemQuantity(state, action) {
       const product = state.cart.products.find(
@@ -48,6 +51,8 @@ const userSlice = createSlice({
         (sum, item) => sum + item.total,
         0
       );
+      //Set updated Cart
+      localStorage.setItem("cart", JSON.stringify(state.cart));
     },
     decreaseItemQuantity(state, action) {
       const product = state.cart.products.find(
@@ -70,9 +75,13 @@ const userSlice = createSlice({
       );
       if (product.quantity === 0)
         userSlice.caseReducers.deleteItem(state, action);
+      //Set updated Cart
+      localStorage.setItem("cart", JSON.stringify(state.cart));
     },
     clearCart(state) {
       state.cart.products = [];
+      //Set updated Cart
+      localStorage.setItem("cart", JSON.stringify(state.cart));
     },
   },
 });

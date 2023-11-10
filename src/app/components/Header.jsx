@@ -39,7 +39,7 @@ const Header = () => {
         </div>
         <div className="flex  gap-4">
           <Link
-            className=" hover:bg-yellow-300 px-2 py-1 hover:text-black rounded-lg"
+            className="  hover:bg-yellow-300 px-2 py-1 hover:text-black rounded-lg"
             href={"/"}>
             Home
           </Link>
@@ -53,15 +53,12 @@ const Header = () => {
             id="list">
             <button
               className=" hover:bg-yellow-200 px-2 py-1 visited:bg-yellow-300 focus:text-black focus:bg-yellow-300 active:bg-yellow-300 hover:text-black rounded-lg"
-              // onMouseUp={handlecloseCat}
               onClick={handleCategories}>
               Categories
             </button>
             <Link
               className=" hover:bg-yellow-300 px-2 py-1 visited:bg-yellow-300 focus:text-black focus:bg-yellow-300 active:bg-yellow-300 hover:text-black rounded-lg"
-              // onMouseUp={handlecloseCat}
-              // onClick={handleCart}>
-              href={`/cart?c=${user.id}`}>
+              href={`/cart`}>
               Cart
             </Link>
             <ul

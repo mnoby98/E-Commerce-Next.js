@@ -1,8 +1,8 @@
 # README => E-commerce web-app
 
-## All Product and items is dummy Data from Api <https://dummyjson.com/docs/products>
+### All Product and items is dummy Data from Api <https://dummyjson.com/docs/products>
 
-### Features:
+### Features: 
 
 - ✅ SEO-friendly setup with canonical URLs and OpenGraph data
 - ✅ Product Catalog: Browse a wide selection of products with detailed descriptions, high-quality images, and pricing information.

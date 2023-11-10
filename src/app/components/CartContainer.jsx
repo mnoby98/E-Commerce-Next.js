@@ -10,13 +10,17 @@ import toast from "react-hot-toast";
 
 const CartContainer = ({ cart }) => {
   const dispatch = useDispatch();
+
   // dispatch(setCart(cart?.carts?.[0]));
-  // useEffect(() => {
-  //   dispatch(setCart(cart?.carts?.[0]));
-  // }, [cart?.carts, dispatch]);
+  useEffect(() => {
+    const cartItems = JSON.parse(localStorage.getItem("cart"));
+    console.log("cartItems", cartItems);
+    dispatch(setCart(cartItems));
+  }, [dispatch]);
   const products = useSelector(getCart);
-  const cartId = useSelector((state) => state?.user?.cart?.id);
   const totalPrice = useSelector((state) => state?.user?.cart?.total);
+  const cartId = useSelector((state) => state?.user?.cart?.userId);
+  console.log("cartId", cartId);
   const totalQuantity = useSelector(
     (state) => state?.user?.cart?.totalQuantity
   );
@@ -37,10 +41,10 @@ const CartContainer = ({ cart }) => {
   }
   async function submitCart() {
     const productsAndUserId = { products, cartId };
-    const data = await addCart({ productsAndUserId });
-    console.log("cart is submit");
-    // console.log(data.isDeleted);
-    // setDeleted(data.isDeleted);
+    const data = await addCart(productsAndUserId);
+    if (data) {
+      toast.success("cart is submited");
+    }
   }
   return (
     <div className=" text-xl   ">
