@@ -23,7 +23,7 @@ const Search = () => {
             console.log(search);
           }}
           placeholder="Search"
-          className=" border-2 border-yellow-300  rounded-lg text-center text-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-400  px-1  focus:ring-offset-2  "
+          className=" border-2 border-black  rounded-lg text-center text-yellow-600 focus:outline-none focus:ring-2 focus:ring-[#d4afb7]  px-1  focus:ring-offset-2  "
         />
       </form>
     </div>

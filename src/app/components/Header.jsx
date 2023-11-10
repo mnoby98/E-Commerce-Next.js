@@ -29,8 +29,10 @@ const Header = () => {
     setShowCategories(false);
   }
   return (
-    <div className="bg-black">
-      <div className="     text-white flex justify-around py-5  font-semibold max-w-6xl m-auto ">
+    <div className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
+      {/* <div className="  bg-white text-black"> */}
+      {/* <div className=" bg-[#296073]"> */}
+      <div className=" text-white  transition-all   duration-300   flex justify-around py-5  font-semibold max-w-6xl m-auto ">
         <div>
           <h1>Logo</h1>
         </div>
@@ -39,12 +41,12 @@ const Header = () => {
         </div>
         <div className="flex  gap-4">
           <Link
-            className="  hover:bg-yellow-300 px-2 py-1 hover:text-black rounded-lg"
+            className=" transition-all duration-300  hover:bg-purple-400 px-2 py-1  rounded-lg"
             href={"/"}>
             Home
           </Link>
           <Link
-            className=" hover:bg-yellow-300 px-2 py-1  visited:bg-yellow-300 focus:text-black focus:bg-yellow-300 active:bg-yellow-300 hover:text-black rounded-lg"
+            className=" transition-all   duration-300 hover:bg-purple-400 px-2 py-1  visited:bg-purple-400  focus:bg-purple-400 active:bg-yellow-300  rounded-lg"
             href={"/menu"}>
             menu
           </Link>
@@ -52,12 +54,12 @@ const Header = () => {
             className=" relative "
             id="list">
             <button
-              className=" hover:bg-yellow-200 px-2 py-1 visited:bg-yellow-300 focus:text-black focus:bg-yellow-300 active:bg-yellow-300 hover:text-black rounded-lg"
+              className=" transition-all   duration-300 hover:bg-purple-400 px-2 py-1 visited:bg-purple-400  focus:bg-purple-400 active:bg-purple-400  rounded-lg"
               onClick={handleCategories}>
               Categories
             </button>
             <Link
-              className=" hover:bg-yellow-300 px-2 py-1 visited:bg-yellow-300 focus:text-black focus:bg-yellow-300 active:bg-yellow-300 hover:text-black rounded-lg"
+              className=" transition-all   duration-300 hover:bg-purple-400 px-2 py-1 visited:bg-purple-400  focus:bg-purple-400 active:bg-purple-400  rounded-lg"
               href={`/cart`}>
               Cart
             </Link>
@@ -69,7 +71,7 @@ const Header = () => {
                 <Link
                   key={caregories[i]}
                   href={`/menu/categories/${category}`}>
-                  <li className=" hover:bg-yellow-400 py-1 px-1">{category}</li>
+                  <li className=" hover:bg-purple-400 py-1 px-1">{category}</li>
                 </Link>
               ))}
             </ul>
