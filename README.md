@@ -2,7 +2,7 @@
 
 ### All Product and items is dummy Data from Api <https://dummyjson.com/docs/products>
 
-### Features: 
+### Features:
 
 - ✅ SEO-friendly setup with canonical URLs and OpenGraph data
 - ✅ Product Catalog: Browse a wide selection of products with detailed descriptions, high-quality images, and pricing information.
@@ -120,55 +120,53 @@ UserName : `kminchelle`
 
 Password : `0lelplR`
 
-![Login](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/97081243-7643-4105-b1de-11f4888cd260)
+![Login](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/0b9fff5f-33ea-4b72-a6ad-4af4a4741d4d)
 
 ---
 
 ### Home Page
 
-![Home](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/e0d5d7d8-483c-45a5-a7af-3b992ca5bee6)
+![Home](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/36fa8b47-4710-44ff-8e8d-4da568a901c1)
 
 ---
 
 ### Menu Page
 
-![Menu](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/d94dafd5-f179-4e7e-90fb-67d93c758d97)
+![Menu](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/85367de1-d6bb-4619-a0a4-6b10172223b5)
 
 ---
 
 ### Menu-Item Page
 
-![MenuItem](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/1f00d668-5412-4e85-82ff-7063c7ed0fe1)
+![MenuItem](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/3b36cde6-05b2-4496-a9c8-f5d91edfdd20)
 
 ---
 
 ### Cart Page
 
-![Cart](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/32284ebc-3bba-4869-8902-5af1522caea6)
+![Cart](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/fe76389f-62d8-4c73-bf47-54b7e01347f2)
 
 ---
 
 ### Cart-rest Page
 
-![Cart-rest](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/509e0447-0115-4e40-b1f5-c8d1f537a89e)
+![Cart-rest](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/ca861f2c-9913-45df-ac13-0933b8c9e0d7)
 
 ---
 
 ### Categories Page
 
-![Categories-Page](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/e06f3ac8-b5b6-4ea7-9e90-4a134abc058f)
-
----
+![Categories-Page](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/fa991cc6-f20a-427a-81b9-bafef2cc7357)
 
 ### Search Page
 
-![Search](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/d5999cd7-d1c2-4eef-a7b0-0a8ddd0012f5)
+![Search](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/60ef4d23-8f32-469c-8966-e24e4d37801f)
 
 ---
 
 ### SmartPhones From Categories Page
 
-![SmartPhones](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/b7a54bef-cfe5-4cd3-a0e2-e47a8943ad73)
+![SmartPhones](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/14a2ccdc-39fc-4aa2-8f40-fa15282ab44f)
 
 ---
 

@@ -22,10 +22,10 @@ const Home = () => {
       {/* <div className="  bg-gradient-to-r from-[#C4FCEF] via-[#00C9A7] to-[#7ad5c3] min-h-screen   "> */}
       <div className="absolute min-h-screen w-full h-full z-[-2] blur-[3px] bg-home bg-cover   "></div>
       <div className="absolute bg-black min-h-screen w-full h-full z-[-1]  opacity-60  bg-cover   "></div>
-      <div className="flex   flex-col items-center text-white   m-auto max-w-5xl  text-2xl     justify-center min-h-screen py-2">
+      <div className="flex   flex-col items-center text-white px-5   m-auto max-w-5xl  text-2xl     justify-center min-h-screen py-2">
         {/* <div className="flex   flex-col items-center text-white     bg-home  bg-cover   justify-center min-h-screen py-2"> */}
         {/* <div className="flex  justify-center py-2 flex-col items-center"> */}
-        <h1 className="text-5xl ">E-Commerce Next</h1>
+        <h1 className="text-5xl text-center ">E-Commerce Next</h1>
         <div className=" text-2xl text-center">
           <h1>Welcome to E-commerce Next, your one-stop shop for all things</h1>
           <p>

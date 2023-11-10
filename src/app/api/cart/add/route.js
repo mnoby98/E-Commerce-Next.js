@@ -11,8 +11,9 @@ products: [
 
 export async function addCart(productsAndUserId) {
   try {
-    const { products, cartId } = productsAndUserId;
+    const { addNewCart, cartId } = productsAndUserId;
     console.log("userId", cartId);
+    console.log("addNewCart", addNewCart);
     // const test = products.map((product) => {
     //   product.id, product.quantity;
     // });
@@ -22,16 +23,7 @@ export async function addCart(productsAndUserId) {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         userId: cartId,
-        products: [
-          {
-            id: 1,
-            quantity: 1,
-          },
-          {
-            id: 50,
-            quantity: 2,
-          },
-        ],
+        products: addNewCart,
       }),
     });
     const data = await res.json();

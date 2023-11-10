@@ -13,7 +13,7 @@ function InputField(props) {
       }     `}>
       <label
         htmlFor={id}
-        className="px-2 text-[18px] text-[#04749B]">
+        className="px-2 text-[18px] text-black">
         {label}
       </label>
       <div className="flex h-12  flex-col ">

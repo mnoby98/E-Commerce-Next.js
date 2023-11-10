@@ -40,7 +40,11 @@ const CartContainer = ({ cart }) => {
     // setDeleted(data.isDeleted);
   }
   async function submitCart() {
-    const productsAndUserId = { products, cartId };
+    const addNewCart = products.map((item) => ({
+      id: item.id,
+      quantity: item.quantity,
+    }));
+    const productsAndUserId = { addNewCart, cartId };
     const data = await addCart(productsAndUserId);
     if (data) {
       toast.success("cart is submited");
@@ -79,7 +83,7 @@ const CartContainer = ({ cart }) => {
           <div className="flex justify-center gap-3 items-center pt-2">
             <button
               onClick={submitCart}
-              className="bg-yellow-300  px-3 py-1 my-3 hover:bg-yellow-400  text-black rounded-md">
+              className="bg-[#54878f]  px-3 py-1 my-3 hover:bg-[#74bec1] text-white rounded-md">
               Submit Cart
             </button>
             <button

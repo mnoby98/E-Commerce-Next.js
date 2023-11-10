@@ -58,7 +58,7 @@ const MenuItem = ({ item }) => {
         <div className="flex justify-center items-center ">
           <button
             onClick={addCart}
-            className="bg-yellow-300 hover:bg-yellow-400 px-3 py-1 rounded-lg">
+            className="bg-[#54878f]  hover:bg-[#74bec1] text-white px-3 py-1 rounded-lg">
             Add To Cart
           </button>
         </div>

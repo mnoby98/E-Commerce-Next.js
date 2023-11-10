@@ -8,7 +8,7 @@ const Menu = async () => {
   const menuList = await getData();
 
   return (
-    <div className=" max-w-7xl m-auto py-2">
+    <div className=" max-w-7xl m-auto my-10 py-2">
       <div className="grid grid-cols-4 gap-5">
         {menuList.map((item) => (
           <Card

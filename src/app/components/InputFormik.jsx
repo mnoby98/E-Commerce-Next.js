@@ -11,13 +11,16 @@ function InputFormik(props) {
       initialValues={initialValues}
       enableReinitialize>
       <Form className="  rounded-lg border-2 border-gray-300 bg-white pb-4">
-        <div className="mx-8 flex items-center justify-between ">
-          <p className="mb-8 mt-6  text-lg">Currencies</p>
+        <div className=" flex items-center  justify-center ">
+          <h1 className="text-3xl   text-[#74bec1]  px-4 my-2 rounded py-1">
+            Login
+          </h1>
+          {/* <p className="mb-8 mt-6  text-lg">Currencies</p> */}
         </div>
         <div className=" px-8 pb-8">{props.children}</div>
-        <div className="flex justify-center">
+        <div className="flex  items-center   justify-center mx-8 ">
           <button
-            className="mt-2  w-24 sm:w-32 rounded-full  bg-[#04749B] focus:outline-none  focus:ring  focus:ring-offset-1 focus:ring-[#04749B]  p-2 text-center   text-white "
+            className="   px-10 rounded-lg  bg-[#74bec1] hover:bg-[#385a5c] text-xl focus:outline-none  focus:ring  focus:ring-offset-1 focus:ring-[#74bec1]  py-1 text-center   text-white "
             type="submit">
             Login
           </button>

@@ -13,20 +13,19 @@ const Login = () => {
   const dispatch = useDispatch();
   const router = useRouter();
   const initialValues = {
-    email: "",
+    userName: "",
     password: "",
   };
 
   const validationSchema = Yup.object({
     // email: Yup.string().email().required("Required field"),
-    email: Yup.string().required("Required field"),
+    userName: Yup.string().required("Required field"),
     password: Yup.string().required("Required field"),
   });
   const onSubmit = async (values) => {
     const req = await axios.post("/api/users/login", values);
     dispatch(currentUser(req.data.data));
     const cart = await getData(req.data.data.id);
-    // dispatch(setCart(cart?.carts?.[0]));
     const cartString = cart?.carts?.[0];
     localStorage.setItem("cart", JSON.stringify(cartString));
     const cartItems = JSON.parse(localStorage.getItem("cart"));
@@ -37,27 +36,30 @@ const Login = () => {
   };
 
   return (
-    <div className="flex  flex-col items-center text-white bg-black justify-center min-h-screen py-2">
-      <h1 className="text-4xl  bg-orange-600 my-2 rounded p-1">Login</h1>
-      <InputFormik
-        validationSchema={validationSchema}
-        initialValues={initialValues}
-        onSubmit={onSubmit}>
-        <InputField
-          name="email"
-          type="text"
-          placeholder="email@gmail.com"
-          id="email"
-          label="Email"
-        />
-        <InputField
-          name="password"
-          type="password"
-          placeholder="password"
-          id="password"
-          label="Password"
-        />
-      </InputFormik>
+    <div>
+      <div className="absolute min-h-screen w-full h-full z-[-2] blur-[3px] bg-home bg-cover   "></div>
+      <div className="absolute bg-black min-h-screen w-full h-full z-[-1]  opacity-60  bg-cover   "></div>
+      <div className="flex  flex-col items-center text-white  justify-center min-h-screen py-2">
+        <InputFormik
+          validationSchema={validationSchema}
+          initialValues={initialValues}
+          onSubmit={onSubmit}>
+          <InputField
+            name="userName"
+            type="text"
+            placeholder="Mahmoud Noby"
+            id="userName"
+            label="User Name"
+          />
+          <InputField
+            name="password"
+            type="password"
+            placeholder="password"
+            id="password"
+            label="Password"
+          />
+        </InputFormik>
+      </div>
     </div>
   );
 };
