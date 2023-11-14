@@ -18,6 +18,17 @@ const userSlice = createSlice({
     },
     addItemToCart(state, action) {
       state.cart.products.push(action.payload);
+
+      //getTotal Quantity for cart
+      state.cart.totalQuantity = state.cart?.products.reduce(
+        (sum, item) => sum + item.quantity,
+        0
+      );
+      //getTotal Price for cart
+      state.cart.total = state.cart?.products.reduce(
+        (sum, item) => sum + item.total,
+        0
+      );
       //Set updated Cart
       localStorage.setItem("cart", JSON.stringify(state.cart));
       //get totalProducts in cart

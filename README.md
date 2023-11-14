@@ -142,18 +142,6 @@ Password : `0lelplR`
 
 ---
 
-### Cart Page
-
-![Cart](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/fe76389f-62d8-4c73-bf47-54b7e01347f2)
-
----
-
-### Cart-rest Page
-
-![Cart-rest](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/ca861f2c-9913-45df-ac13-0933b8c9e0d7)
-
----
-
 ### Categories Page
 
 ![Categories-Page](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/fa991cc6-f20a-427a-81b9-bafef2cc7357)
@@ -167,6 +155,30 @@ Password : `0lelplR`
 ### SmartPhones From Categories Page
 
 ![SmartPhones](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/14a2ccdc-39fc-4aa2-8f40-fa15282ab44f)
+
+---
+
+### Cart Page
+
+![Cart](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/fe76389f-62d8-4c73-bf47-54b7e01347f2)
+
+---
+
+### Cart-rest Page
+
+![Cart-rest](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/ca861f2c-9913-45df-ac13-0933b8c9e0d7)
+
+---
+
+### Submit Order
+
+![Submit Order](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/d5b11a36-c850-4a06-9bd0-91501819cf84)
+
+---
+
+### Payment
+
+![Payment](https://github.com/mnoby98/E-Commerce-Next.js/assets/133987293/1370e00f-70e2-4b90-b9f5-8f5c8348a6f6)
 
 ---
 

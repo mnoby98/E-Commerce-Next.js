@@ -7,9 +7,10 @@ function TextArea(props) {
     <div
       className={`relative mb-5 ${
         table ? " grid grid-cols-[1fr_2fr] " : " flex flex-col gap-2"
-      }     `}
-    >
-      <label htmlFor={id} className="px-2 text-[18px] text-[#04749B]">
+      }     `}>
+      <label
+        htmlFor={id}
+        className="px-2 text-[18px] ">
         {label}
       </label>
       <div className="h-15 flex flex-col">
@@ -31,7 +32,10 @@ function TextArea(props) {
           }}
         </Field>
         {error == null ? (
-          <ErrorMessage name={name} component={ErrorText} />
+          <ErrorMessage
+            name={name}
+            component={ErrorText}
+          />
         ) : (
           <ErrorText>{error} </ErrorText>
         )}

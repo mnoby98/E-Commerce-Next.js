@@ -49,7 +49,7 @@ const MenuItem = ({ item }) => {
       <div className=" capitalize text-2xl flex flex-col mb-4 gap-3 shadow-xl p-2 mt-5 bg-gray-50 rounded">
         <p>Title : {item.title}</p>
         <p>description : {item.description}</p>
-        <p>price : {item.price} $</p>
+        <p>price : {item.price} LE</p>
         <p>discountPercentage: {item.discountPercentage}</p>
         <p>rating: {item.rating} &#9733;</p>
         <p>stock: {item.stock}</p>

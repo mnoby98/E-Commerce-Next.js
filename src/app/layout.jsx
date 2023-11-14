@@ -15,7 +15,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <ReduxProvider>{children}</ReduxProvider>
+        <ReduxProvider>
+          {/* <Header /> */}
+          {children}
+        </ReduxProvider>
         <Toaster
           position="top-center"
           reverseOrder={false}

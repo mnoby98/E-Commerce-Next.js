@@ -21,7 +21,7 @@ const SearchPage = ({ searchParams }) => {
   return (
     <div className=" max-w-7xl m-auto py-2">
       <h1 className="text-4xl mb-4 flex justify-center">
-        Search about with {searchParam}
+        Search about {searchParam}
       </h1>
       <div className="grid grid-cols-4 gap-5">
         {items.length === 0 && (

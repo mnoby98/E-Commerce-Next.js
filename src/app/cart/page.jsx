@@ -1,15 +1,12 @@
 import Header from "../components/Header";
 import CartContainer from "../components/CartContainer";
 
-const Cart = async ({ searchParams }) => {
-  const cartId = searchParams.c;
-  const cart = await getData(cartId);
-
+const Cart = async () => {
   return (
     <div>
       <Header />
       <div className=" max-w-4xl m-auto py-2">
-        <CartContainer cart={cart} />
+        <CartContainer />
       </div>
     </div>
   );

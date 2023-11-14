@@ -23,8 +23,10 @@ const Login = () => {
     password: Yup.string().required("Required field"),
   });
   const onSubmit = async (values) => {
+    console.log(values);
     const req = await axios.post("/api/users/login", values);
-    dispatch(currentUser(req.data.data));
+    console.log("req", req);
+    // dispatch(currentUser(req.data.data));
     const cart = await getData(req.data.data.id);
     const cartString = cart?.carts?.[0];
     localStorage.setItem("cart", JSON.stringify(cartString));
