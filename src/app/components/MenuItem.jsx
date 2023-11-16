@@ -27,16 +27,14 @@ const MenuItem = ({ item }) => {
 
     dispatch(addItemToCart(cartItem));
     toast.success("Product is in Cart");
-    console.log(newProduct);
-    console.log("addToCart");
   }
   return (
     <div>
       <h1 className="text-4xl mb-8 flex  justify-center">{item.title}</h1>
-      <div className="flex    justify-center items-center gap-4 bg-gray-10 ">
+      <div className=" flex-wrap lg:flex-nowrap flex  snap-center   justify-center items-center gap-4 bg-gray-10 ">
         {item.images.map((image, i) => (
           <div
-            className="snap-center"
+            className=""
             key={i}>
             <img
               src={image}

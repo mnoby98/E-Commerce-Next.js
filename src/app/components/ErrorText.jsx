@@ -1,5 +1,5 @@
 function ErrorText(props) {
-  return <div className=" text-lg text-red-500">{props.children}</div>;
+  return <div className=" text-sm text-red-500">{props.children}</div>;
 }
 
 export default ErrorText;

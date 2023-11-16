@@ -7,13 +7,10 @@ import { useSelector } from "react-redux";
 
 const Header = () => {
   const [showCategories, setShowCategories] = useState(false);
+  const [showHeader, setShowHeader] = useState(false);
   const [caregories, setCategories] = useState([]);
 
   const user = useSelector((state) => state.user.user);
-
-  async function handleCart() {
-    console.log("user", user.id);
-  }
 
   async function handleCategories() {
     setShowCategories((show) => !show);
@@ -23,17 +20,22 @@ const Header = () => {
       const req = await axios.get("/api/categories");
       setCategories(req.data.data);
     }
-    console.log("showCategories", showCategories);
   }
-  function handlecloseCat() {
-    setShowCategories(false);
+  function handleShowHeader() {
+    setShowHeader((show) => !show);
   }
+
   const handleClickOutside = (event) => {
     const listContainer = document.getElementById("list");
+    const headerContainer = document.getElementById("headerList");
 
     // Check if the clicked element is outside the list container
     if (listContainer && !listContainer.contains(event.target)) {
       setShowCategories(false);
+    }
+
+    if (headerContainer && !headerContainer.contains(event.target)) {
+      setShowHeader(false);
     }
   };
 
@@ -45,24 +47,34 @@ const Header = () => {
     return () => {
       document.removeEventListener("click", handleClickOutside);
     };
-  }, []);
+  }, [showHeader]);
   return (
-    // <div className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-    <div className=" bg-[#54878f]">
-      {/* <div className="  bg-white text-black"> */}
-      {/* <div className=" bg-[#296073]"> */}
-      <div className=" text-white  transition-all  items-center  duration-300   flex justify-around py-5  font-semibold max-w-6xl m-auto ">
-        <div>
+    <div className=" bg-[#54878f]  ">
+      <div className=" text-white  transition-all relative text-2xl sm:text-sm px-10 text-center  lg:items-center  duration-300   lg:flex lg:justify-around py-5  font-semibold  sm:max-w-7xl mx-auto ">
+        <div className="flex gap-2 justify-center items-center">
           <Link
             href={"/"}
-            className="text-2xl">
+            className="sm:text-2xl text-3xl ">
             E-commerce Next
           </Link>
         </div>
-        <div>
+        <div className="py-3 justify-center flex gap-4 lg:py-0">
+          <button
+            onClick={handleShowHeader}
+            className="sm:hidden flex gap-1 justify-center flex-col">
+            <div className=" w-6 bg-white h-1"></div>
+            <div className=" w-3 bg-white h-1"></div>
+            <div className=" w-6 bg-white h-1"></div>
+          </button>
           <Search />
         </div>
-        <div className="flex  gap-4">
+        <div
+          id="headerList"
+          className={`sm:flex sm:items-center sm:justify-around   ${
+            showHeader
+              ? "flex flex-col absolute  right-0 w-full  top-0"
+              : "hidden"
+          } bg-[#54878f]  gap-4   py-3  `}>
           <Link
             className=" transition-all duration-300  hover:bg-[#74bec1] px-2 py-1  rounded-lg"
             href={"/"}>
@@ -73,6 +85,11 @@ const Header = () => {
             href={"/menu"}>
             Menu
           </Link>
+          <Link
+            className=" transition-all   focus:outline-none   duration-300 hover:bg-[#74bec1] px-2 py-1 visited:bg-[#74bec1]  focus:bg-[#74bec1] active:[#74bec1]  rounded-lg"
+            href={`/cart`}>
+            Cart
+          </Link>
           <div
             className=" relative "
             id="list">
@@ -81,15 +98,10 @@ const Header = () => {
               onClick={handleCategories}>
               Categories
             </button>
-            <Link
-              className=" transition-all   focus:outline-none   duration-300 hover:bg-[#74bec1] px-2 py-1 visited:bg-[#74bec1]  focus:bg-[#74bec1] active:[#74bec1]  rounded-lg"
-              href={`/cart`}>
-              Cart
-            </Link>
             <ul
               className={`${
-                showCategories === true ? "absolute" : " hidden"
-              }  text-white   top-8 capitalize divide-y-2 border-[1px] border-[#74bec1]   rounded-lg  bg-[#98c6c0] w-[200px] scroll-smooth  text-xl font-medium text-center cursor-pointer h-[200px] overflow-y-scroll`}>
+                showCategories === true ? "absolute z-10" : " hidden"
+              }  text-white  right-10  top-8 capitalize divide-y-2 border-[1px] border-[#74bec1]   rounded-lg  bg-[#98c6c0] w-[200px] scroll-smooth   font-medium text-center cursor-pointer h-[200px] overflow-y-scroll`}>
               {caregories.map((category, i) => (
                 <Link
                   key={caregories[i]}

@@ -13,7 +13,7 @@ const Search = () => {
     setSearch("");
   }
   return (
-    <div>
+    <div className=" ">
       <form onSubmit={(e) => handleSubmit(e)}>
         <input
           type="text"
@@ -23,7 +23,7 @@ const Search = () => {
             console.log(search);
           }}
           placeholder="Search"
-          className="  rounded-lg text-center text-[#54878f] focus:outline-none focus:ring-2 focus:ring-[#54878f]  px-1  focus:ring-offset-2  "
+          className=" w-40  rounded-lg text-center text-[#54878f] focus:outline-none focus:ring-2 focus:ring-[#54878f]  px-1  focus:ring-offset-2  "
         />
       </form>
     </div>

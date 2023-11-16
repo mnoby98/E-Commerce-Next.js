@@ -18,28 +18,24 @@ const Login = () => {
   };
 
   const validationSchema = Yup.object({
-    // email: Yup.string().email().required("Required field"),
     userName: Yup.string().required("Required field"),
     password: Yup.string().required("Required field"),
   });
   const onSubmit = async (values) => {
-    console.log(values);
     const req = await axios.post("/api/users/login", values);
-    console.log("req", req);
-    // dispatch(currentUser(req.data.data));
+    dispatch(currentUser(req.data.data));
     const cart = await getData(req.data.data.id);
     const cartString = cart?.carts?.[0];
     localStorage.setItem("cart", JSON.stringify(cartString));
     const cartItems = JSON.parse(localStorage.getItem("cart"));
     console.log("cartItems", cartItems);
     dispatch(setCart(cartItems));
-    console.log(cart.carts[0]);
     router.push("/");
   };
 
   return (
     <div>
-      <div className="absolute min-h-screen w-full h-full z-[-2] blur-[3px] bg-home bg-cover   "></div>
+      <div className="absolute min-h-screen w-full h-full z-[-2] blur-[3px] bg-home bg-cover text-lg    "></div>
       <div className="absolute bg-black min-h-screen w-full h-full z-[-1]  opacity-60  bg-cover   "></div>
       <div className="flex  flex-col items-center text-white  justify-center min-h-screen py-2">
         <InputFormik
