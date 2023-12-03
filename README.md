@@ -1,6 +1,6 @@
 # README => E-commerce web-app
 
-### All Product and items is dummy Data from Api <https://dummyjson.com/docs/products>
+### All Products and items is dummy Data from Api <https://dummyjson.com/docs/products>
 
 ### Features:
 
